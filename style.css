@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: hsl(204, 43%, 93%);
+    /* border: 5px solid green; */
+    height: 100vh;
+    font-family: "Karla", sans-serif;
+
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+    height: 100vh;
+}
+.container {
+    /* border: 3px solid black; */
+    display: grid;
+    grid-template-rows: 230px 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "header header"
+        "sidebar sidebar";
+    width: 680px;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    min-height: 375px;
+    overflow: hidden;
+}
+.box1 {
+    grid-area: header;
+}
+.box2,
+.box3 {
+    grid-template-areas: sidebar;
+}
+.box1 .boxHeader {
+    color: hsl(179, 62%, 43%);
+}
+.boxHeader {
+    padding-bottom: 20px;
+}
+.box2 .boxHeader {
+    padding-bottom: 15px;
+}
+.box1 .subText {
+    color: hsl(71, 73%, 54%);
+}
+
+.box1 {
+    background: white;
+}
+.box1 p {
+    line-height: 1.6;
+    color: hsl(218, 22%, 67%);
+    font-size: 17px;
+}
+.box {
+    padding: 35px 35px 25px 35px;
+}
+.subText {
+    padding-bottom: 20px;
+}
+.box2 {
+    background-color: #2bb3b1;
+}
+
+.box2,
+.box3 .boxHeader {
+    color: white;
+}
+.box3 {
+    background-color: rgba(74, 190, 189, 255);
+}
+.box2,
+.box3 p {
+    color: rgb(255, 255, 255, 70%);
+}
+span {
+    font-size: 2.8rem;
+    color: white;
+    padding-right: 15px;
+}
+.box2 {
+    color: white;
+}
+h4 {
+    display: inline;
+    position: relative;
+    bottom: 10px;
+    color: rgb(120, 239, 216);
+}
+.box2 .subText {
+    padding-bottom: 5px;
+}
+.signUp {
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    margin-top: 10px;
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 7px;
+}
+.signUp:hover {
+    color: rgba(6, 236, 194, 0.978);
+    cursor: pointer;
+}
+@media only screen and (max-width: 668px) {
+    body {
+        /* background: violet; */
+        margin: 80px 50px 80px 50px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
